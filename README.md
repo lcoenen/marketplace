@@ -15,10 +15,10 @@ As we said, the user can either be (mainly) a seller or a buyer. We'll then use 
 
 ### Client
 
-> Title: Buying a watch and a scarf 
-> Primary Actor: Stephan the Buyer
-> Level: +
-> 
+* Title: Buying a watch and a scarf 
+* Primary Actor: Stephan the Buyer
+ Level: +
+
 > Stephan want to buy a little present for his girlfriend's birthday. 
 > He'll browse to market.place and discover the most bought product.
 > Since he can't see neither any scarfes nor watches, he'll *find the item he want*
@@ -28,29 +28,29 @@ As we said, the user can either be (mainly) a seller or a buyer. We'll then use 
 > He'll then *leave a feedback* to the vendor saying his girlfriend 
 > was so happy with her gift.
 
-> Title: Finding the item he want
-> Primary Actor: Stephan the Buyer
-> Level: !
-> 
+* Title: Finding the item he want
+* Primary Actor: Stephan the Buyer
+* Level: !
+ 
 > Stephan will either use the search bar on the top of the webpage, 
 > which will autofill what he's typing with the correct proposition.
 > He could also browse through the differents *categories* showed on
 > the right of his screen, from broader to narrower categories.
 
-> Title: Proceed to checkout
-> Primary Actor: Stephan the Buyer
-> Level: !
-> 
+* Title: Proceed to checkout
+* Primary Actor: Stephan the Buyer
+* Level: !
+ 
 > Stephan will check his bask, keep browsing until he has everything he want,
 > or delete some items if he doesn't want them anymore, then checkout. 
 > He'll recieve a specific two specific bank account adress with how much 
 > he own to each vendor. He'll also recieve an URL to *leave a feedback* 
 > once he'll recieve his items.
 
-> Title: Leave a feedback
-> Primary Actor: Stephan the Buyer
-> Level: !
-> 
+* Title: Leave a feedback
+* Primary Actor: Stephan the Buyer
+* Level: !
+ 
 > Once he recieved his scarf and watch, he'll connect to the URL he recieved when
 > he checked out. The system will remember he bought a scarf and a watch, and he'll
 > be able to leave a feedback of one star for the scarf (which wasn't that pretty after all)
@@ -58,11 +58,11 @@ As we said, the user can either be (mainly) a seller or a buyer. We'll then use 
 
 ### Seller
 
-> Title: Sending a scarf
-> Primary Actor: Barack the Seller
-> Scope: System (black-box)	
-> Level: +
-> 
+* Title: Sending a scarf
+* Primary Actor: Barack the Seller
+* Scope: System (black-box)	
+* Level: +
+ 
 > Barack is a scarf seller. He'll wake up in the morning and connect
 > to the website, identify himself and check today orders. He'll discover an
 > order have been paid to an adress in New-York and that a feedback have been
