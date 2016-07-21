@@ -1,0 +1,25 @@
+{
+  "name": "marketplace",
+  "version": "0.1.0",
+  "description": "Marketplace is a simple website using the MEAN (MongoDB, express, angular.js, Node.js) stack and SASS (made for auto-didactic purpose).",
+  "main": "server.coffee",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lcoenen/marketplace.git"
+  },
+  "keywords": [
+    "marketplace",
+    "sass",
+    "angular",
+    "mongodb"
+  ],
+  "author": "Loïc Coenen",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/lcoenen/marketplace/issues"
+  },
+  "homepage": "https://github.com/lcoenen/marketplace#readme"
+}
