@@ -1,0 +1,48 @@
+
+<div class="home">
+
+	<h1>Marketplace</h1>
+	<p class="lead">
+		Welcome on Marketplace &reg;, the only exchange place on the internet! Buy and sell everything here.
+	</p>
+
+</div>
+
+<ol class="breadcrumb">
+	<li class="active"><a href="index.html">Home</a></li>
+</ol>
+
+<div class="row">
+
+	<div class="col-sm-4">
+		
+		<h2>Choose a category</h2>
+		<ul class="list-group">
+			<li class="list-group-item" ng-repeat="category in ctrl.categories">
+				{{category.name}}
+				<span class="badge">{{category.count}}</span>
+			</li>
+
+		</ul>
+
+		</div><!-- /.col-sm-4 -->
+		<div class="col-sm-8 items">
+
+			<h2>Our products</h2>
+			<div class="col-sm-2 item" ng-repeat="item in ctrl.featured">
+		
+				<img src="{{item.picture}}" class="img-thumbnail" alt="100x100" alt="Item example 1"> <br>
+
+				<strong ng-bind="item.price"></strong>
+
+				<p ng-bind="item.description"></p>
+				<button type="button" class="btn btn-default">See more</button>
+			
+			</div>
+	
+		</div>
+		
+	</div>
+	
+</div>
+	

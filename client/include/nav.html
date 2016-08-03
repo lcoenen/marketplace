@@ -1,0 +1,23 @@
+
+<div class="container">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar" ng-click="ctrl.state = 'categories'">Categories</span>
+		<span class="icon-bar">Your bask</span>
+		<span class="icon-bar">About us</span>
+		</button>
+
+		<a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" /></a>
+		<a class="navbar-brand" href="#" style="font-variant: small-caps;">Marketplace</a>
+		
+	</div>
+	<div id="navbar" class="collapse navbar-collapse">
+		<ul class="nav navbar-nav">
+			<li class="active"><a ng-click="ctrl.state = 'index'">Home</a></li>
+			<li><a ng-click="ctrl.state = 'categories'">Categories</a></li>
+			<li><a href="bask.html">Your bask <span class="badge">1</span></a></li>
+			<li><a href="about.html">About us</a></li>
+		</ul>
+	</div>
+</div>
