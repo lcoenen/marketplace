@@ -1,0 +1,34 @@
+/* MAIN STYLE */
+body {
+  /*	background-color: @bgcolor;*/
+  /*	color: @fgcolor;*/
+  font-family: Helvetica, Arial, sans-serif;
+  padding-left: 4%;
+}
+.bask-table img {
+  width: 100px;
+  height: 100px;
+}
+.categorie img {
+  width: 200px;
+  height: 200px;
+}
+.hidden {
+  visibility: hidden;
+}
+.home {
+  padding-top: 50px;
+  text-align: center;
+}
+.item {
+  text-align: justify;
+  font-size: 0.7em;
+}
+.item img {
+  width: 100px;
+  height: 100px;
+}
+.item strong {
+  font-weight: bold;
+  font-size: 1em;
+}
