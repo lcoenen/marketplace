@@ -72,7 +72,7 @@ describe('item', function() {
 			
 		}).to.throw(chai.AssertionError)
 		
-	})
+	})	
 	
 	it('should register and delete himself correctly')
 	it('should ping the correct RESTAPI adress')
@@ -90,22 +90,22 @@ describe('category', function() {
 		expect(category.description).to.equal('description')
 		
 		expect(category2.picture).to.equal('img/meat.png')
-		expect(category2).to.have.keys('name', 'picture', 'description')
+		expect(category2).to.contain.keys('name', 'picture', 'description')
 		
 	})
 	
-	it('should be constructed from another item', function() {
+	it('should be constructed from another category', function() {
 		
 		category 	= new Category('Chocolates', 'img/chocolate.png', 'description')
 		category2	= new Category(category)
 		
 		expect(category2.name).to.equal('Chocolates')
 		
-		expect(category2).to.have.keys('name', 'picture', 'description')
+		expect(category2).to.contain.keys('name', 'picture', 'description')
 		
 	})
 	
-	it('should acception object construction', function() {
+	it('should accept object construction', function() {
 		
 		category1 = {
 			name: 'Chocolates',
@@ -114,12 +114,12 @@ describe('category', function() {
 			other_property: 'Lorem Ipsum'
 		}
 		
-		category2 = new Item(category1)
+		category2 = new Category(category1)
 		
 		expect(category2.name).to.equal('Chocolates')
 		expect(category2.picture).to.equal('img/chocolate.png')
 		
-		expect(category2).to.have.keys('name', 'picture', 'description')
+		expect(category2).to.contain.keys('name', 'picture', 'description')
 		
 	})
 	
@@ -169,7 +169,7 @@ describe('category', function() {
 		
 		meats.unlink(item3)
 		
-		expect(meats.member).to.have.a.lengthOf(1)
+		expect(meats.members).to.have.a.lengthOf(1)
 		expect(meats.members[0]).to.equal(item4)
 		
 		chocolate.unlink([item1, item2])

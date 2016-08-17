@@ -1,4 +1,4 @@
-<div class="categories" ng-show="ctrl.state == 'categories'">
+<div class="categories">
 
 	<div class="home">
 		<h1>Categories</h1>
@@ -6,8 +6,8 @@
 	</div>
 
 	<ol class="breadcrumb">
-		<li><a href="index.html">Home</a></li>
-		<li class="active"><a href="categories.html">Categories</a></li>
+		<li><a href="#/home">Home</a></li>
+		<li class="active"><a href="#/categories">Categories</a></li>
 	</ol>
 
 	<div class="row categories">
@@ -16,7 +16,7 @@
 		
 			<h2>{{category.name}}</h2>
 		
-			<img src="{{category.img}}" class="img-thumbnail" alt="{{category.name}}"> <br>
+			<img ng-src="{{category.img}}" class="img-thumbnail" alt="{{category.name}}"> <br>
 		
 		</div>
 

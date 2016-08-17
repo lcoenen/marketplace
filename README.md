@@ -70,6 +70,10 @@ As we said, the user can either be (mainly) a seller or a buyer. We'll then use 
 
 ## Usage
 
+Install all npm depencies
+
+`npm install`
+
 Compile client and server, then serve
 
 `make` 
@@ -78,9 +82,17 @@ Just compile everything
 
 `make compile`
 
-Run the server on `localhost:80`
+Run the server on `localhost:8080` (or whatever env.port is)
 
 `make serve`
+
+Launch the web browser on `localhost:8080`
+
+`make launch`
+
+Serve and launch
+
+`make see`
 
 Run unittests
 
