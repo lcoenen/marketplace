@@ -3,21 +3,19 @@ var chai	=	require('chai'),
 
 Item = function(name_item, picture, description, price){
 
-	props = ['name', 'picture', 'description', 'price']
-
 	expect(name_item).to.be.ok
 	
 	if(picture == undefined && description == undefined && price == undefined){
 		
 		item = name_item
 		
-		expect(item).to.contain.keys(props)
+		expect(item).to.contain.keys(Item._props)
 		
-		i = props.length
+		i = Item._props.length
 		
 		while(i--){
 		
-			key = props[i]
+			key = Item._props[i]
 			
 			this[key] = item[key]
 			
@@ -38,5 +36,8 @@ Item = function(name_item, picture, description, price){
 	
 	}
 }
+
+Item._props = ['name', 'picture', 'description', 'price']
+
 
 module.exports = Item

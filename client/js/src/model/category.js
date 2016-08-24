@@ -4,9 +4,14 @@ var chai	=	require('chai'),
 
 var Item	=	require('./item.js')
 
-Category = function(name_cat, picture, description){
+/*
 
-	props = ['name', 'picture', 'description']
+	Category class
+	
+	Represent a category of items
+
+*/
+Category = function(name_cat, picture, description){
 
 	expect(name_cat).to.be.ok
 	
@@ -14,13 +19,13 @@ Category = function(name_cat, picture, description){
 		
 		cat = name_cat
 		
-		expect(cat).to.contain.keys(props)
+		expect(cat).to.contain.keys(Category._props)
 		
-		i = props.length
+		i = Category._props.length
 		
 		while(i--){
 		
-			key = props[i]
+			key = Category._props[i]
 			
 			this[key] = cat[key]
 			
@@ -57,15 +62,17 @@ Category = function(name_cat, picture, description){
 
 Category.prototype.link = function() {
 
-	input = arguments.length - 1? Array.from(arguments): [arguments[1]]
+	items = arguments.length - 1? Array.from(arguments): [arguments[0]]
 
-	expect(input).to.be.an('Array')
+	expect(items).to.be.an('Array')
 	
-	if(input.length - 1){
+	if(items.length - 1){
+	
+		i = items.length
 	
 		while(i--){
 		
-			item = input[i]
+			item = items[i]
 		
 			this.link(item)
 			
@@ -75,9 +82,11 @@ Category.prototype.link = function() {
 	
 	else{
 	
-			expect(item).to.be.an.instanceOf(Item)
-			
-			this._members = this._members.add(item)
+		item = items[0]
+	
+		expect(item).to.contain.keys(Item._props)
+	
+		this._members = this._members.add(item)
 		
 	}
 
@@ -87,15 +96,17 @@ Category.prototype.link = function() {
 
 Category.prototype.unlink = function() {
 
-	input = arguments.length - 1? Array.from(arguments): [arguments[1]]
+	items = arguments.length - 1? Array.from(arguments): [arguments[0]]
 
-	expect(input).to.be.an('Array')
+	expect(items).to.be.an('Array')
 	
-	if(input.length - 1){
+	if(items.length - 1){
+	
+		i = items.length
 	
 		while(i--){
 		
-			item = input[i]
+			item = items[i]
 		
 			this.unlink(item)
 		
@@ -104,13 +115,18 @@ Category.prototype.unlink = function() {
 	}
 	
 	else{
+
+		item = items[0]
 	
-			expect(item).to.be.an.instanceOf(Item)
+		expect(item).to.contain.keys(Item._props)
 			
-			this._members = this._members.remove(item)
+		this._members = this._members.remove(item)
 		
 	}
 
 }
+
+Category._props = ['name', 'picture', 'description']
+
 
 module.exports = Category

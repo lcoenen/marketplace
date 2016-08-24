@@ -147,11 +147,11 @@ describe('category', function() {
 	
 	it('should link and unlink to items', function() {
 		
-		item1 = Item('Piece of chocolate', 'img/chocolate.png', 'Description of the chocolate', 22.8)
-		item2 = Item('Bigger piece of chocolate', 'img/chocolate_bigger.png', 'Description of the biggerchocolate', 40)
+		item1 = new Item('Piece of chocolate', 'img/chocolate.png', 'Description of the chocolate', 22.8)
+		item2 = new Item('Bigger piece of chocolate', 'img/chocolate_bigger.png', 'Description of the biggerchocolate', 40)
 		
-		item3 = Item('Piece of meat', 'img/meat.png', 'Description of the meat', 10)
-		item4 = Item('Piece of jam', 'img/jam.png', 'Description of the jam', 20)
+		item3 = new Item('Piece of meat', 'img/meat.png', 'Description of the meat', 10)
+		item4 = new Item('Piece of jam', 'img/jam.png', 'Description of the jam', 20)
 		
 		chocolates	= new Category('Chocolates', 'img/chocolate.png', 'description')
 		
@@ -180,8 +180,8 @@ describe('category', function() {
 	
 	it('should have a readonly list of member', function() {
 		
-		item1 = Item('Piece of chocolate', 'img/chocolate.png', 'Description of the chocolate', 22.8)
-		item2 = Item('Bigger piece of chocolate', 'img/chocolate_bigger.png', 'Description of the biggerchocolate', 40)
+		item1 = new Item('Piece of chocolate', 'img/chocolate.png', 'Description of the chocolate', 22.8)
+		item2 = new Item('Bigger piece of chocolate', 'img/chocolate_bigger.png', 'Description of the biggerchocolate', 40)
 		
 		chocolates	= new Category('Chocolates', 'img/chocolate.png', 'description')
 		
