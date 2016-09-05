@@ -147,18 +147,19 @@ describe('category', function() {
 	
 	it('should link and unlink to items', function() {
 		
-		item1 = new Item('Piece of chocolate', 'img/chocolate.png', 'Description of the chocolate', 22.8)
-		item2 = new Item('Bigger piece of chocolate', 'img/chocolate_bigger.png', 'Description of the biggerchocolate', 40)
+		item1 = new Item('Piece of chocolate', 'img/chocolate.png', 'Description of the chocolate', 22.8);
+		item2 = new Item('Bigger piece of chocolate', 'img/chocolate_bigger.png', 'Description of the biggerchocolate', 40);
 		
-		item3 = new Item('Piece of meat', 'img/meat.png', 'Description of the meat', 10)
-		item4 = new Item('Piece of jam', 'img/jam.png', 'Description of the jam', 20)
+		meat = item3 = new Item('Piece of meat', 'img/meat.png', 'Description of the meat', 10);
+		jam = item4 = new Item('Piece of jam', 'img/jam.png', 'Description of the jam', 20);
 		
-		chocolates	= new Category('Chocolates', 'img/chocolate.png', 'description')
+		chocolates	= new Category('Chocolates', 'img/chocolate.png', 'description');
 		
-		chocolates.link(item1, item2)
+		chocolates.link(item1, item2);
 		
 		(meats	= new Category('Meats', 'img/meat.png', 'description'))
-			.link([item3])
+			.link(...([item3]))
+			
 		meats.link(item4)
 				
 		expect(meats.members).to.be.an('array')
@@ -172,9 +173,9 @@ describe('category', function() {
 		expect(meats.members).to.have.a.lengthOf(1)
 		expect(meats.members[0]).to.equal(item4)
 		
-		chocolate.unlink([item1, item2])
+		chocolates.unlink(...([item1, item2]))
 		
-		expect(meats.members).to.have.a.lengthOf(0)
+		expect(meats.members).to.deep.equal([jam])
 		
 	})
 	
@@ -189,7 +190,7 @@ describe('category', function() {
 
 			chocolates.members = [item1, item2]
 
-		}).to.throw(ReferenceError)
+		}).to.throw(Error)
 		
 	})
 
